@@ -24,6 +24,7 @@ describe ("API Test Suite Sidiq Collection", function(){
         });
         expect(hasilPost.status, "Pastikan data yang diinput sudah benar").to.equal(201)
         
+        //validasi Schema
         const ajv = new Ajv();
         const data = await hasilPost.json();
         const check = ajv.compile(schema_post);
