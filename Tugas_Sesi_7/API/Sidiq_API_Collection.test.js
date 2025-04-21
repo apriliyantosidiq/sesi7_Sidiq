@@ -1,13 +1,12 @@
 import fetch from "node-fetch";
-import { expect } from "chai";
 import Ajv from "ajv";
-import schema_post from "../Schema/reqresShcema";
-
+import { expect } from "chai";
+import schema_post from "../Schema/reqresShcema.js"
 
 describe ("API Test Suite Sidiq Collection", function(){
     //request GET
     it ("GET_Post", async function () {
-        const hasilGet = await fetch('https://dummyjson.com/posts/1');
+        const hasilGet = await fetch ('https://dummyjson.com/posts/1');
         expect(hasilGet.status, "Pastikan URL yang digunakan sudah benar").to.equal(200)
     });
     //request POST
@@ -22,7 +21,7 @@ describe ("API Test Suite Sidiq Collection", function(){
             headers : {"Content-Type": "application/json"},
             body : JSON.stringify(newPost)
         });
-        expect(hasilPost.status, "Pastikan data yang diinput sudah benar").to.equal(201)
+        expect(hasilPost.status, "Pastikan data yang diinput sudah benar").to.equal(201);
         
         //validasi Schema
         const ajv = new Ajv();
@@ -31,5 +30,5 @@ describe ("API Test Suite Sidiq Collection", function(){
         const hasilSchema = check(data);
 
         expect(hasilSchema, "Schema harus valid").to.be.true
-    })
+    });
 })  
