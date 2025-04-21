@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { expect } from "chai";
 import Ajv from "ajv";
-import schema_post from "../Schema/reqresShcema.js"
+import schema_post from "../Schema/reqresShcema";
 
 
 describe ("API Test Suite Sidiq Collection", function(){
@@ -31,7 +31,5 @@ describe ("API Test Suite Sidiq Collection", function(){
         const hasilSchema = check(data);
 
         expect(hasilSchema, "Schema harus valid").to.be.true
-
-    
     })
 })  
