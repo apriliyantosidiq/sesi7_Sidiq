@@ -1,3 +1,4 @@
+export default schema_post
 const schema_post = {
     "type": "object",
  "properties": {

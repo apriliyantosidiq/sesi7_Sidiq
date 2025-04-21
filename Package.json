@@ -2,6 +2,7 @@
     "name": "Assignment Sesi 7",
     "version": "1.0.0",
     "description": "Ini tugas boothcamp DigitalSkola QA Engineer - Sesi 7",
+    "type": "module",
     "scripts": {
         "Testing": "mocha tugas_sesi_7 --recursive --timeout 5000 --reporter spec",
         "Laporan": "mocha tugas_sesi_7 --recursive --reporter mocha-simple-html-reporter --reporter-options output=testReport.html"
