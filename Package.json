@@ -4,8 +4,8 @@
     "description": "Ini tugas boothcamp DigitalSkola QA Engineer - Sesi 7",
     "type": "module",
     "scripts": {
-        "Testing": "mocha 'Tugas_Sesi_7/**/*.test.js' --timeout 5000 --reporter spec",
-        "Laporan": "mocha 'Tugas_Sesi_7/**/*.test.js' --reporter mocha-simple-html-reporter --reporter-options output=testReport.html"
+        "Testing": "mocha Tugas_Sesi_7 --recursive --timeout 60000 --reporter spec",
+        "Laporan": "mocha Tugas_Sesi_7 --recursive --reporter mocha-simple-html-reporter --reporter-options output=testReport.html"
     },
     "dependencies": {
         "node-fetch": "^3.3.1",
